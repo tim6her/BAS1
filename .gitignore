@@ -16,7 +16,6 @@
 *.fls
 *.ilg
 *.ind
-*latexmk
 *.lof
 *.lot
 *.maf
@@ -25,3 +24,5 @@
 *.out
 *.synctex.gz 
 .DS_Store
+*.bcf
+*.run.xml
