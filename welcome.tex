@@ -9,14 +9,64 @@
 
 \usepackage{graphicx}
 
+% Unsere Makros
+\newcommand*{\ddsg}[2][Donau]{#1dampfschifffahrts#2}
+\newcommand*{\dx}[1][x]{\;\mathrm{d}#1}
+\newcommand*{\N}[1][]{\mathbb{N}^{#1}}
+
 \title{Blöder Titel}
 \author{ich}
 \date{\today}
+
+% Mathe-Pakete
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Für Theorem und seine Freunde
+\usepackage{thmtools}
+
+\declaretheorem[
+name=Theorem,
+style=theorem,
+numberwithin=section
+]{thm}
+\declaretheorem[
+name=Lemma,
+style=theorem,
+sibling=thm,
+]{lem}
+\declaretheorem[
+name=Proposition,
+style=theorem,
+sibling=thm,
+]{prop}
+
+\declaretheorem[
+name=Definition,
+style=definition,
+numbered=no,
+]{defin}
+
+\declaretheorem[
+name=Bemerkung,
+style=remark,
+numbered=no
+]{rem}
+
+% Bibliographie
+\usepackage[style=numeric,
+            backend=biber,
+            doi=false,isbn=false,url=false,
+            ]{biblatex}
+\addbibresource{./content/references.bib}
 
 % Ich komme immer zum Schluss!
 \usepackage{hyperref}
 
 \begin{document}
+\part{16.10.2015}
 \section{Umlaute und aktuelle deutsche Rechtschreibung}
 Fix Schwyz quäkt Jürgen blöd vom Paß.
 The quick brown fox jumps over the lazy dog.
@@ -73,7 +123,7 @@ Hier kommt ein Bild (siehe Abb.~\ref{im:Bibel})
 
 \begin{figure}
 \begin{center}
-    \includegraphics[width=0.5\linewidth]{./res/gutenberg.jpg}
+    \includegraphics[width=0.5\textwidth]{./res/gutenberg.jpg}
 \caption{Gutenberg Bibel}
 \label{im:Bibel}
 \end{center}
@@ -103,6 +153,172 @@ Donau\-dampf\-schiff\-fahrts\-ge\-sell\-schaft&&\\
 \end{table}
 Und noch mehr Text, der auf die Tabelle verweist (siehe Tab.~\ref{tab:Tabelle}).
 \listoftables
+
+\newpage
+\part{23.10.2015}
+
+\section{Listen und Aufzählungen}
+
+\begin{itemize}
+\item Bullet 1
+\item Bullet 2
+\end{itemize}
+
+\begin{enumerate}
+\item Listeneintrag 1
+\item Listeneintrag 2\label{item:List 1}
+\end{enumerate}
+
+Ich beziehe mich auf Eintrag~\ref{item:List 1}.
+
+\begin{description}
+\item[Felis silvestris catus] die Katze
+\end{description}
+
+Einkaufsliste
+\begin{itemize}
+\item Supermarkt
+\begin{enumerate}
+\item Zwiebel
+\item[x] Äpfel
+\item Milch
+\end{enumerate}
+\item Bauhaus
+\begin{enumerate}
+\item Hammer
+\item Nägel
+\end{enumerate}
+\end{itemize}
+
+\section{Externe Dokumente}
+
+\input{./content/extern.tex}
+
+\section{Makros}
+
+Geschwungene Klammern für Abstand
+\ddsg{gesellschaft} + \ddsg[Inn]{-AG}skapitän
+
+\section{Mathematik}
+\subsection{Einfache Formeln}
+Eine einfache Formel $2 a x=2$. Hier geht es weiter. \ddsg{} \ddsg{} \ddsg{} \ddsg{}  \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{}
+
+Sei $a = 2$, dann ist $a$ eine Primzahl.\ddsg{} \ddsg{} \ddsg{} \ddsg{}  \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{} \ddsg{}
+
+So kann eine längere Gleichung aussehen
+\[
+4ac + 3a - b.
+\]
+Hier geht es weiter.
+
+Wir können auch die quadratische Lösungsformel angeben:
+\[
+x_{1,2} = \frac{p}{2} \pm \sqrt{\frac{p^2}{4} - q}
+\]
+
+Die kummulierte Wahrscheinlichkeitsfunktion der Normalverteilung:
+\[
+\Phi(t) = \frac{1}{\sqrt{2\pi}\sigma} \int_{-\infty}^{t} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} \dx
+\]
+
+\subsection{Klammern aller Formen und Größen}
+Die kummulierte Wahrscheinlichkeitsfunktion der Normalverteilung:
+\[
+\Phi(t) = \frac{1}{\sqrt{2\pi}\sigma} \int_{-\infty}^{t} e^{-\frac{\left(\dfrac{x-\mu}{\sigma}\right)^2}{2}} \dx
+\]
+
+Eine Menge:
+\[
+M := \left\lbrace\frac{1}{x^2} \;\middle\vert\; x\in N \right\rbrace
+\]
+
+\[
+M := \left\lbrace 2x \mid x\in N \right\rbrace
+\]
+
+\subsection{Textschnitte im \emph{Mathe}-Modus}
+\[
+\mathrm{f},\mathit{f}, \mathtt{f}, \mathfrak{ABC}, \mathcal{ABC}, \mathbb{F}
+\]
+
+\[
+M := \left\lbrace 2x \mid x\in \N[*] \right\rbrace
+\]
+
+\[
+A = 
+\begin{pmatrix}
+1 & 2\\
+3 & 4\\
+\end{pmatrix}
+\]
+
+\subsection{Nummerierung und mehrere Zeilen}
+
+\begin{equation}
+A = 
+\begin{pmatrix}
+1 & 2\\
+3 & 4\\
+\end{pmatrix}\label{eq:Eine Gleichung}
+\end{equation}
+
+\begin{align}
+a &= b\nonumber\\
+ab &= b^2\nonumber\\
+a^2 - ab &= a^2 - b^2\\
+(a-b)a &= (a-b)(a + b)\nonumber\\
+a &= a+b\nonumber\\
+0 &= b
+\end{align}
+
+Wie wir in Gleichung~\ref{eq:Eine Gleichung} gesehen haben, ...
+
+Keine Zeilennummern
+\begin{equation*}
+A = 
+\begin{pmatrix}
+1 & 2\\
+3 & 4\\
+\end{pmatrix}\label{eq:Eine Gleichung}
+\end{equation*}
+
+\begin{align*}
+a &= b\\
+ab &= b^2\\
+a^2 - ab &= a^2 - b^2\\
+(a-b)a &= (a-b)(a + b)\\
+a &= a+b\\
+0 &= b
+\end{align*}
+
+
+\subsection{Theoreme}
+
+\begin{thm}[Ein besonders schwieriges]
+Ein Theorem
+\end{thm}
+\begin{lem}
+Ein Lemma
+\end{lem}
+\begin{defin}
+Eine Definition
+\end{defin}
+
+\begin{rem}
+Ich bemerke, es wird schon spät.
+\end{rem}
+
+\begin{proof}
+Ein Beweis
+\end{proof}
+
+\section{Bibliographie}
+
+Ich mag die Bücher \cite[\S~5, Abs.~7]{kafka2015prozess} und \cite{AC02615918}. \textcite{kafka2015prozess} schreibt tolle Bücher.
+
+\printbibliography
+
 \end{document}
 
 

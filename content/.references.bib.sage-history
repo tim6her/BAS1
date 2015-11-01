@@ -1,0 +1,15 @@
+"@book{kafka2015prozess,\n  title={Der Proze{\\ss}},\n  author={Kafka, F.},\n  isbn={9783958019621},\n  url={https://books.google.at/books?id=47YtCgAAQBAJ},\n  year={2015},\n  publisher={SEVERUS Verlag}\n}\n\n@BOOK{AC02615918,\nauthor = {Kafka, Franz},\neditor = {Rösch, Ewald},\ntitle = {Die Verwandlung},\nseries = {Goldmann ; 7665},\nedition = {1. Aufl.},\nyear = {1999},\naddress = {[München]},\npublisher = {Goldmann},\nISBN = {3-442-07665-X kart. : DM 14.90, S 109.00},\nkeywords = {Kafka, Franz, 1883-1924, Die Verwandlung; (DE-588)4099253-6},\n}"
+{"patch":[[[[0,", Franz}"],[-1,","],[0,"\neditor "]],231,231,17,16]],"time":1445608835212}
+{"patch":[[[[0," = {1999"],[1,"; [19]99"],[0,"},\naddre"]],346,346,16,24]],"time":1445608797356}
+{"patch":[[[[0,"h, Ewald"],[1," [H"],[0,"},\ntitle"]],254,254,16,19]],"time":1445608793341}
+{"patch":[[[[0,"Ewald [H"],[1,"rsg.]"],[0,"},\ntitle"]],257,257,16,21]],"time":1445608791341}
+{"patch":[[[[0,"ditor = "],[-1,"{"],[0,"Rösch, E"]],241,241,17,16]],"time":1445608789364}
+{"patch":[[[[0,"}\neditor"],[-1," = "],[0,"Rösch, E"]],238,238,19,16]],"time":1445608787368}
+{"patch":[[[[0,"z}\ne"],[-1,"ditor"],[0,"Rösc"]],237,237,13,8]],"time":1445608785370}
+{"patch":[[[[0,", Franz}"],[-1,"\ne"],[0,"Rösch, E"]],231,231,18,16]],"time":1445608783326}
+{"patch":[[[[0,"a, Franz"],[-1,"}"],[1,", 1883-1924 and "],[0,"Rösch, E"]],230,230,17,32]],"time":1445608781331}
+{"patch":[[[[0,"015proze"],[-1,"ss"],[0,",\n  titl"]],12,12,18,16]],"time":1445608427125}
+{"patch":[[[[0,"015proze"],[1,"ß"],[0,",\n  titl"]],12,12,16,17]],"time":1445608425127}
+{"patch":[[[[0,"\n}\n\n"],[-1,"@BOOK{AC02615918,\nauthor = {Kafka, Franz, 1883-1924 and Rösch, Ewald [Hrsg.]},\ntitle = {Die Verwandlung},\nseries = {Goldmann ; 7665},\nedition = {1. Aufl.},\nyear = {1999; [19]99},\naddress = {[München]},\npublisher = {Goldmann},\nISBN = {3-442-07665-X kart. : DM 14.90, S 109.00},\nkeywords = {Kafka, Franz, 1883-1924, Die Verwandlung; (DE-588)4099253-6},\n}"]],193,193,356,4]],"time":1445608172873}
+{"patch":[[[[0,"g}\n}"],[-1,"\n\n"]],191,191,6,4]],"time":1445608023476}
+{"patch":[[[[-1,"@book{kafka2015prozeß,\n  title={Der Proze{\\ss}},\n  author={Kafka, F.},\n  isbn={9783958019621},\n  url={https://books.google.at/books?id=47YtCgAAQBAJ},\n  year={2015},\n  publisher={SEVERUS Verlag}\n}"]],0,0,195,0]],"time":1445608021517}
